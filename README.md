@@ -20,9 +20,15 @@ As fotos e a sequência são armazenadas localmente no navegador com IndexedDB. 
 
 O armazenamento depende do navegador e do endereço utilizado. Limpar os dados do site, trocar de dispositivo ou usar navegação privada pode impedir a recuperação. Não há sincronização entre dispositivos.
 
+### Estatísticas opcionais
+
+O Vercel Web Analytics é carregado somente após autorização do visitante, sem cookies de rastreamento. São enviadas visualizações de página e metadados gerais de acesso (dispositivo, navegador, localização aproximada e origem da visita), não fotos, nomes de arquivos ou conteúdo da sequência. Os parâmetros e fragmentos da URL são removidos. A preferência pode ser alterada no rodapé, em **privacidade**, e sinais de privacidade do navegador são respeitados. A recusa não limita o aplicativo.
+
+[Dados coletados pela Vercel](https://vercel.com/docs/analytics/privacy-policy) · [Painel de estatísticas](https://vercel.com/i3b3l/prevu/analytics)
+
 ## Tecnologia
 
-HTML, CSS e JavaScript nativos · IndexedDB · Vercel
+HTML, CSS e JavaScript nativos · IndexedDB · Vercel · Web Analytics (opcional)
 
 Sem framework, dependências de execução ou etapa de compilação.
 
