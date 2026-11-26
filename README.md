@@ -10,9 +10,14 @@ Simule e organize suas sequências de Stories e Status antes de publicar. Uma ex
 
 - Visualizar fotos em uma prévia vertical 9:16, com preenchimento proporcional.
 - Navegar por toque, gesto horizontal ou setas do teclado.
+- Tocar no centro da prévia para entrar/sair da tela cheia; fechar pelo × ou Escape.
 - Adicionar e reorganizar fotos arrastando as miniaturas.
 - Excluir uma foto da sequência e desfazer a última exclusão durante a sessão.
 - Continuar de onde parou ao reabrir o mesmo navegador.
+
+## Instalar no celular
+
+Toque na seta de instalação no cabeçalho. No Android, use o aviso de instalação ou o menu do navegador; no iPhone, abra no Safari e use Compartilhar → Adicionar à Tela de Início. É um PWA, sem APK ou App Store. O ícone :3 identifica o app. Após uma primeira visita online bem-sucedida, o shell pode funcionar offline; as fotos continuam no IndexedDB, não no cache do service worker. O modo de tela cheia utiliza a API nativa quando disponível e ocupa a área visível do navegador nos demais casos. A proporção 9:16 é mantida.
 
 ## Privacidade
 
