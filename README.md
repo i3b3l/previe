@@ -1,7 +1,7 @@
 # prevu.
 
-Simulador de Stories e Status: Instagram, WhatsApp, Facebook e modo livre. Interface rosa-bebê. Fotos processadas localmente, sem login nem upload. Exportação PNG 1080 × 1920 sem interface simulada.
+Simulador de sequências de Stories e Status. Selecione várias fotos e visualize uma por vez, na ordem recebida do seletor de arquivos. Toque nas laterais, deslize horizontalmente ou use as setas. Escolha Instagram, WhatsApp, Facebook ou modo livre.
 
-Abra `index.html` no navegador. Para publicar na Vercel, importe o repositório como projeto estático (Other), sem comando de build.
+Sem edição, exportação, login, upload ou publicação de fotos. Processamento local. Prévia ilustrativa e não oficial.
 
-Prévia ilustrativa e não oficial.
+Abra `index.html` no navegador. Deploy estático na Vercel.
