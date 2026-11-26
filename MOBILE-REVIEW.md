@@ -1,6 +1,6 @@
-# prevuu. — Adaptação mobile
+# previe. — Adaptação mobile
 
-Skill: Impeccable 4.11.0, instalada localmente em `.agents/skills/impeccable`. Fluxos: adapt e polish, com contexto, diagnóstico, planejamento, implementação, verificação e revisão final. A marca rosa-bebê e a assinatura existentes são preservadas. A escrita prevuu. acompanha o domínio aprovado.
+Skill: Impeccable 4.11.0, instalada localmente em `.agents/skills/impeccable`. Fluxos: adapt e polish, com contexto, diagnóstico, planejamento, implementação, verificação e revisão final. A marca rosa-bebê e a assinatura existentes são preservadas. A escrita previe. acompanha o domínio aprovado.
 
 ## Decisões
 - Prévia 9:16 proporcional ao viewport dinâmico, com margens de áreas seguras e controles abaixo da foto.

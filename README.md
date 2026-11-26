@@ -1,4 +1,4 @@
-# prevu.
+# previe.
 
 Simulador de sequências de Stories e Status em uma única tela vertical 9:16 (referência 1080 × 1920). Fotos preenchem automaticamente o quadro, com recorte central proporcional, sem distorção. Toque nas laterais, deslize horizontalmente ou use as setas.
 
