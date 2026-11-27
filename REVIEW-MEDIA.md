@@ -18,3 +18,7 @@ Detector: imagem inicial sem src, intencionalmente oculta até a seleção de m�
 ## Revisao mobile: encaixe na altura util
 - Impeccable layout, adapt, harden e polish: grid com espaco restante real, safe areas, centralizacao, compactacao proporcional e sem scroll vertical nas telas retrato testadas de altura >=480px; abaixo disso, preserva acessibilidade com rolagem.
 - 140 verificacoes em 20 viewports; limites de sobreposicao, centro e rodape aferidos. Regressoes de midia e privacidade aprovadas. Detector: apenas imagem inicial intencionalmente oculta sem src. Validacao em Chromium emulado, nao em iOS/Android fisicos.
+
+## Previa dos espectadores
+- Referencias fornecidas: interface do Instagram e WhatsApp, sem dados pessoais ou imagens originais. Moldura 9:18.5, midia 9:16, controles ilustrativos, sem barra de sistema simulada. Capturas das duas abas revisadas. Detector: imagem inicial oculta e avisos de padding intencionais na moldura e no campo de resposta. Validacao em Chromium, nao em aparelhos fisicos.
+- 140 verificacoes responsivas e regressao de midia aprovadas.
