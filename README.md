@@ -1,54 +1,63 @@
 # previe.
 
-**Antes de postar.**
+**Antes de postar. :3**
 
-Simule e organize suas sequências de Stories e Status antes de publicar. Uma experiência minimalista, responsiva e sem cadastro.
+Simule e organize suas fotos e vídeos de Stories e Status antes de publicar. Minimalista, responsivo e sem cadastro.
 
 **[Experimente o previe.](https://useprevie.vercel.app)**
 
-## O que você pode fazer
+## Funcionalidades
 
-- Visualizar fotos em uma prévia vertical 9:16, com preenchimento proporcional.
-- Navegar por toque, gesto horizontal ou setas do teclado.
-- Tocar no centro da prévia para entrar e sair do modo imersivo; Escape também fecha.
-- Adicionar e reorganizar fotos arrastando as miniaturas.
-- Excluir uma foto da sequência e desfazer a última exclusão durante a sessão.
-- Continuar de onde parou ao reabrir o mesmo navegador.
+- Instagram: **Meu story**. WhatsApp: **Meu status**. Duas sequências independentes, com ordem e posição salvas localmente.
+- Fotos e vídeos juntos, miniaturas numeradas e duração de vídeo.
+- Prévia 9:16 ilustrativa, navegação por toque, deslize, miniaturas ou teclado.
+- Adicione, arraste, mova, exclua e desfaça a última exclusão de cada sequência na sessão.
+- Toque no centro para abrir ou fechar o modo imersivo. Fotos avançam após 5 segundos; vídeos avançam ao terminar. A reprodução para no último item.
+- Segure a prévia para pausar ou use o botão de reprodução. Vídeos começam sem som, com opção de ativá-lo. Escape sai do modo imersivo.
+- Instalação PWA e funcionamento offline após a primeira visita online bem-sucedida.
 
-## Instalar no celular
+Os formatos reproduzíveis dependem dos codecs do navegador (JPG, PNG, MP4 e WebM são sugestões, não garantia universal). Não há conversão, edição, corte automático de vídeos ou publicação em redes sociais.
 
-Toque na seta de instalação no cabeçalho. No Android, use o aviso de instalação ou o menu do navegador; no iPhone, abra no Safari e use Compartilhar → Adicionar à Tela de Início. É um PWA, sem APK ou App Store. O ícone :3 identifica o app. Após uma primeira visita online bem-sucedida, o shell pode funcionar offline; as fotos continuam no IndexedDB, não no cache do service worker. O modo imersivo ocupa a área visível do navegador sem solicitar tela cheia nativa, evitando o aviso do navegador. A proporção 9:16 é mantida.
+## Instalação
+
+Toque na seta no cabeçalho. Android: instalação pelo navegador compatível. iPhone: Safari → Compartilhar → Adicionar à Tela de Início. Sem APK nem App Store.
 
 ## Privacidade
 
-As fotos e a sequência são armazenadas localmente no navegador com IndexedDB. O aplicativo não envia fotos a um servidor, não altera os arquivos originais e não publica conteúdo em redes sociais.
+Arquivos originais, ordem e seleção ficam no IndexedDB do mesmo navegador, dispositivo e domínio; nenhum arquivo é enviado ao servidor. A migração da versão anterior coloca a sequência existente no Instagram, em uma transação atômica. O WhatsApp começa vazio. Excluir na sequência não exclui da galeria. Desfazer funciona durante a sessão.
 
-O armazenamento depende do navegador e do endereço utilizado. Limpar os dados do site, trocar de dispositivo ou usar navegação privada pode impedir a recuperação. Não há sincronização entre dispositivos.
+Não há sincronização entre dispositivos. A limpeza dos dados do site, a navegação privada, limites de armazenamento ou a troca de domínio podem impedir a recuperação. Evite editar a mesma sequência em várias abas simultaneamente.
 
-### Estatísticas opcionais
+Vercel Web Analytics registra somente visualizações autorizadas no domínio oficial, sem cookies de rastreamento, envio de mídia ou identificação publicitária. A preferência pode ser alterada em **privacidade**. Eventos personalizados foram preparados com uma lista fixa de ações sem propriedades de mídia, mas estão desativados; exigem plano Pro ou Enterprise. Não há coleta de identificadores de uso recorrente. Nenhum plano pago foi contratado.
 
-O Vercel Web Analytics é carregado exclusivamente em useprevie.vercel.app e somente após autorização do visitante, sem cookies de rastreamento. São enviadas visualizações de página e metadados gerais de acesso (dispositivo, navegador, localização aproximada e origem da visita), não fotos, nomes de arquivos ou conteúdo da sequência. Os parâmetros e fragmentos da URL são removidos. A preferência pode ser alterada no rodapé, em **privacidade**, e sinais de privacidade do navegador são respeitados. A recusa não limita o aplicativo.
-
-[Dados coletados pela Vercel](https://vercel.com/docs/analytics/privacy-policy) · [Painel de estatísticas](https://vercel.com/i3b3l/prevu/analytics)
+[Privacidade da Vercel](https://vercel.com/docs/analytics/privacy-policy) · [Painel de estatísticas](https://vercel.com/i3b3l/prevu/analytics)
 
 ## Tecnologia
 
-HTML, CSS e JavaScript nativos · IndexedDB · Vercel · Web Analytics (opcional)
+HTML, CSS, JavaScript nativos · IndexedDB · Service Worker · Vercel.
 
-Sem framework, dependências de execução ou etapa de compilação.
+Miniaturas reduzidas, leitura de mídia em série, um vídeo ativo por vez, faixa de miniaturas reaproveitada na navegação e persistência de seleção sem regravar arquivos quando a ordem não muda. Sem framework ou dependências de execução.
 
 ## Executar localmente
 
 ```bash
-git clone https://github.com/i3b3l/previe.git
-cd previe
+git clone https://github.com/i3b3l/PREVIE.git
+cd PREVIE
 python -m http.server 8000
 ```
 
-Abra `http://localhost:8000` no navegador. O servidor local permite utilizar o armazenamento de forma consistente. Python é necessário apenas para este exemplo de servidor, não para executar a aplicação na Vercel.
+Abra http://localhost:8000. Python é apenas uma opção de servidor local.
 
-## Projeto
+## Testes
 
-Interface mobile-first, com suporte a desktop e tablet. Prévia ilustrativa e independente, sem vínculo com Instagram ou WhatsApp.
+```bash
+node analytics-test.cjs
+node media-test.cjs
+node responsive-test.cjs
+```
+
+Node.js com WebSocket/fetch nativos e Chrome instalado (defina CHROME_PATH se necessário). Os testes usam perfis temporários e mídia sintética.
+
+Prévia independente e não oficial, sem vínculo com Instagram ou WhatsApp.
 
 Desenvolvido por [i3b3l](https://github.com/i3b3l).

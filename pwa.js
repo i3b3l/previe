@@ -7,7 +7,7 @@ function sync(){button.hidden=standalone()}
 function close(){if(panel.open)panel.close()}
 function help(){instructions.textContent=ios()?'Abra no Safari, toque em Compartilhar, escolha Adicionar à Tela de Início e confirme. Se aparecer Abrir como App, deixe ativado.':'Abra o menu do navegador e escolha Instalar aplicativo ou Adicionar à tela inicial. Se não aparecer, tente pelo Chrome ou Edge.';if(!panel.open)panel.showModal()}
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();promptEvent=e;sync()});
-window.addEventListener('appinstalled',()=>{promptEvent=null;button.hidden=true;close()});
+window.addEventListener('appinstalled',()=>{promptEvent=null;button.hidden=true;close();window.previeTrack?.('app_installed')});
 window.matchMedia('(display-mode: standalone)').addEventListener?.('change',sync);
 button.addEventListener('click',async()=>{if(standalone())return;if(!promptEvent){help();return}const event=promptEvent;promptEvent=null;try{await event.prompt();const result=await event.userChoice;if(result?.outcome==='accepted')button.hidden=true;else sync()}catch{help()}});
 document.getElementById('installClose').addEventListener('click',close);sync();
