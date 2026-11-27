@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const key='previe.analytics.preference.v1',panel=document.getElementById('privacyPanel'),state=document.getElementById('privacyState'),yes=document.getElementById('analyticsYes'),no=document.getElementById('analyticsNo'),open=document.getElementById('privacyOpen');
-const production=location.protocol==='https:'&&['useprevie.vercel.app','prevuu.vercel.app','prevu-two.vercel.app'].includes(location.hostname);
+const production=location.protocol==='https:'&&location.hostname==='useprevie.vercel.app';
 const privacySignal=()=>navigator.globalPrivacyControl===true||navigator.doNotTrack==='1'||window.doNotTrack==='1';
 let choice=null,loaded=false;
 try{const saved=localStorage.getItem(key);if(saved==='yes'||saved==='no')choice=saved}catch{}
